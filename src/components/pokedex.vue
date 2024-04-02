@@ -244,12 +244,17 @@
       text-align: center;
       border-radius: 10px;
       margin: 30px;
+      padding: 5%;
     } 
 
     .cont2{
       margin: 30px;
     }
   
+    li::marker {
+     content: "";
+    }
+
   .stat{
     font-size: 140%;
     font-weight: bold;

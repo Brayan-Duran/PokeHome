@@ -4,7 +4,7 @@
     <div class="row " style="width: 100%;">
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 q-pa-md text-center">
         <div class="pokeimagen">
-          <img v-if="pokemon.sprites && pokemon.sprites.front_default" :src="pokemon.sprites.front_default"
+          <img v-if="pokemon.sprites && pokemon.sprites.front_default"  :src="pokemon.sprites?.other['official-artwork'].front_default"
             :style="{ filter: filterStyle }">
         </div>
         <q-btn color="primary" :label="poke1" @click="validaccion(poke1)" rounded class="q-mr-md q-mt-xs" />
@@ -200,8 +200,8 @@ const tipoColores = {
 }
 
 .pokeimagen img {
-  height: 350px;
-  width: 350px;
+  height: 250px;
+  width: 250px;
 }
 
 .ty {
@@ -220,4 +220,9 @@ const tipoColores = {
 .no-margin-top {
   margin: 0 !important;
 }
+
+li::marker {
+  content: "";
+}
+
 </style>
